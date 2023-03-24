@@ -6,11 +6,8 @@ use SimplePie\SimplePie;
 
 class NewsFetcher
 {
-    private SimplePie $simplePie;
-
-    public function __construct(SimplePie $simplePie)
+    public function __construct(private SimplePie $simplePie)
     {
-        $this->simplePie = $simplePie;
     }
 
     public function fetch(string $keyword, string $language): ?array

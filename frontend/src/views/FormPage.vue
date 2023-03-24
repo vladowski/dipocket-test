@@ -70,7 +70,7 @@ export default {
     async submitForm() {
       this.loading = true;
       try {
-        const response = await fetch(backendUrl + `/api/news?keyword=${this.keyword}&language=${this.language}`);
+        const response = await fetch(backendUrl + `/?keyword=${this.keyword}&language=${this.language}`);
         if (!response.ok) {
           throw new Error('Server returned an error.');
         }

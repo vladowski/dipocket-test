@@ -17,12 +17,12 @@ class NewsTransformer
         $transformedResults = [];
 
         foreach ($results as $result) {
-            $newsDto = new NewsDto(
+            $newsDto = new NewsDTO(
                 $result->get_title(),
                 $result->get_link(),
                 $result->get_date(),
-                $result->get_description(),
-                $result->get_base()
+                $result->get_base(),
+                $result->get_description()
             );
 
             $transformedResults[] = $newsDto->toArray();

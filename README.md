@@ -14,16 +14,16 @@ cd backend
 composer install
 ```
 
-Copy `.env.example` to `.env` and fill out `VITE_BACKEND_URL` with the relevant value.
+Start the backend server using the following command from the `backend/public` directory.
+```
+cd public
+php -S localhost:8000
+```
 
-Start the Laravel backend server using the following command.
-```
-php artisan serve
-```
+Go to `frontend` folder and copy `.env.example` to `.env` and fill out `VITE_BACKEND_URL` with the relevant value. (`http://localhost:8000` for local setup)
 
 Install frontend dependencies by running `npm install` in the frontend directory.
 ```
-cd ../frontend
 npm install
 ```
 

@@ -2,24 +2,19 @@
 
 namespace App\DTO;
 
-class NewsDto
+class NewsDTO
 {
-    public string $link;
-    public string $description;
-    public string $title;
-    public string $date;
-    public string $source;
-
-    public function __construct(string $title, string $link, string $date, string $description = '', string $source = '')
+    public function __construct(
+        private string $title,
+        private string $link,
+        private string $date,
+        private string $source,
+        private string $description
+    )
     {
-        $this->link = $link;
-        $this->description = $description;
-        $this->title = $title;
-        $this->date = $date;
-        $this->source = $source;
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'link' => $this->link,
